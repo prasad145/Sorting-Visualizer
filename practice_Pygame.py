@@ -157,4 +157,4 @@ def textDisplay():
         display.blit(text, (0, 0))
         pygame.display.flip()
 
-# textDisplay()
+textDisplay()
