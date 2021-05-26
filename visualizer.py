@@ -58,16 +58,29 @@ while ok:
                 break     
     elif sys.argv[1].lower() == "selctionsort":
         #selection sort here
-
-
+        pygame.display.set_caption("Selction Sort")
+        for i in range(len(bar_height)):
+            minNum = i
+            for j in range(i+1,len(bar_height)):
+                if bar_height[minNum] > bar_height[j]:
+                    minNum = j
+                    bar_height[i],bar_height[minNum] = bar_height[minNum],bar_height[i]
         disp.fill((0, 0, 0))
         draw_bars(bar_height)
         pygame.time.delay(10)
         pygame.display.update()
+                
     elif sys.argv[1].lower() == "insertionsort":
         #insertion sort here
-        
-        
+        pygame.display.set_caption("Insertion Sort")
+        for i in range(1,len(bar_height)):
+            key = bar_height[i]
+            j = i - 1
+            while j >=0 and key < bar_height[j]:
+                bar_height[j+1] = bar_height[j]
+                j -= 1
+            bar_height[j+1] = key
+                
         disp.fill((0, 0, 0))
         draw_bars(bar_height)
         pygame.time.delay(10)
