@@ -1,11 +1,11 @@
 #  Sorting-Visualizer
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-   Different Sorting Algorithms visualization using pygame!
+Different Sorting Algorithms visualization using pygame!
 
 
 #  Algorithm Implemented:
 
-## Bubble Sort:
+## [Bubble Sort](https://www.geeksforgeeks.org/bubble-sort/):
 
 Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 ```
@@ -37,7 +37,7 @@ O(n^2)
 O(2)
 ```
 
-## Quick Sort (Random Pivot)
+## [Quick Sort (Random Pivot)](https://www.geeksforgeeks.org/quick-sort/)
 	
 QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.
 
@@ -74,5 +74,27 @@ O(n logn)
 ```
 #### Space Complexity:
 ```
-O(n^2)
+O(n)
+```
+## [Merge Sort](https://www.geeksforgeeks.org/merge-sort/)
+Like QuickSort, Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is a key process that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.
+```
+MergeSort(arr[], l,  r)
+If r > l
+     1. Find the middle point to divide the array into two halves:  
+             middle m = l+ (r-l)/2
+     2. Call mergeSort for first half:   
+             Call mergeSort(arr, l, m)
+     3. Call mergeSort for second half:
+             Call mergeSort(arr, m+1, r)
+     4. Merge the two halves sorted in step 2 and 3:
+             Call merge(arr, l, m, r)
+```
+#### Time Complexity : 
+```
+O(n logn)
+```
+#### Space Complexity:
+```
+O(n)
 ```

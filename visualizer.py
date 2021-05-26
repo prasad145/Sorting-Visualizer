@@ -50,13 +50,12 @@ while ok:
                     bar_height[j] = bar_height[j + 1]
                     bar_height[j + 1] = tmp
                     vis = True 
-
                 disp.fill((0, 0, 0))
                 draw_bars(bar_height)
                 pygame.time.delay(20)
                 pygame.display.update()
             if not vis:
-                break
+                break     
     elif sys.argv[1].lower() == "selctionsort":
         #selection sort here
 
@@ -85,7 +84,6 @@ while ok:
                 if(arr[j] < pivot):
                     i += 1
                     arr[i], arr[j] = arr[j], arr[i] #swap index i and j 
-
             arr[i + 1], arr[r] = arr[r], arr[i + 1]
             disp.fill((0, 0, 0))
             draw_bars(bar_height)
@@ -110,13 +108,53 @@ while ok:
         quickSort(bar_height, 0, len(bar_height) - 1)
     elif sys.argv[1].lower() == "mergesort":
         #mergesort
+        pygame.display.set_caption("Merge Sort")
+        def mergeSort(arr):
+            if len(arr)  > 1:
+                mid = len(arr) // 2
+                left = arr[:mid]
+                right = arr[mid:]
+                mergeSort(left)
+                mergeSort(right)
+                i = j = k = 0
+                
+                while(i < len(left) and j < len(right)):
+                    if(left[i] < right[j]):
+                        arr[k] = left[i]
+                        i += 1
+                    else:
+                        arr[k] = right[j]
+                        j += 1
+                    k += 1
+                    if(i == 0 or j == 0):
+                        disp.fill((0, 0, 0))
+                        draw_bars(bar_height)
+                        pygame.time.delay(10)
+                        pygame.display.update()
+                    else:
+                        disp.fill((0, 0, 0))
+                        draw_bars(bar_height)
+                        pygame.time.delay(70)
+                        pygame.display.update()
+                
+                while(i < len(left)):
+                    arr[k] = left[i]
+                    i += 1
+                    k += 1
+                    disp.fill((0, 0, 0))
+                    draw_bars(bar_height)
+                    pygame.time.delay(70)
+                    pygame.display.update()
 
-
-        disp.fill((0, 0, 0))
-        draw_bars(bar_height)
-        pygame.time.delay(10)
-        pygame.display.update()
-
+                while(j < len(right)):
+                    arr[k] = right[j]
+                    j += 1
+                    k += 1
+                    disp.fill((0, 0, 0))
+                    draw_bars(bar_height)
+                    pygame.time.delay(70)
+                    pygame.display.update()                    
+        mergeSort(bar_height)
 pygame.quit()
 
 
