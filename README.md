@@ -1,7 +1,16 @@
 # SORTING VISUALISATION
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br/>
-Different Sorting Algorithms visualization using pygame!
-
+Different Sorting Algorithms visualization using pygame! <br/>
+#### Available Algorithms:
+	* BubbleSort
+	* SelectionSort
+	* InsertionSort
+	* QuickSort
+	* MergeSort
+#### To Run:
+```
+	python visualizer.py algo_name
+```
 
 #  Algorithms Implemented:
 

@@ -56,19 +56,19 @@ while ok:
                 pygame.display.update()
             if not vis:
                 break     
-    elif sys.argv[1].lower() == "selctionsort":
+    elif sys.argv[1].lower() == "selectionsort":
         #selection sort here
-        pygame.display.set_caption("Selction Sort")
+        pygame.display.set_caption("Selection Sort")
         for i in range(len(bar_height)):
             minNum = i
             for j in range(i+1,len(bar_height)):
                 if bar_height[minNum] > bar_height[j]:
                     minNum = j
                     bar_height[i],bar_height[minNum] = bar_height[minNum],bar_height[i]
-        disp.fill((0, 0, 0))
-        draw_bars(bar_height)
-        pygame.time.delay(10)
-        pygame.display.update()
+                    disp.fill((0, 0, 0))
+                    draw_bars(bar_height)
+                    pygame.time.delay(100)
+                    pygame.display.update()
                 
     elif sys.argv[1].lower() == "insertionsort":
         #insertion sort here
@@ -79,12 +79,16 @@ while ok:
             while j >=0 and key < bar_height[j]:
                 bar_height[j+1] = bar_height[j]
                 j -= 1
-            bar_height[j+1] = key
-                
-        disp.fill((0, 0, 0))
-        draw_bars(bar_height)
-        pygame.time.delay(10)
-        pygame.display.update()
+                disp.fill((0, 0, 0))
+                draw_bars(bar_height)
+                pygame.time.delay(100)
+                pygame.display.update()
+            bar_height[j+1] = key        
+            disp.fill((0, 0, 0))
+            draw_bars(bar_height)
+            pygame.time.delay(10)
+            pygame.display.update()
+            
     elif sys.argv[1].lower() == "quicksort":
         #quicksort
         pygame.display.set_caption("Quick Sort")
