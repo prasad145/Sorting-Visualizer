@@ -1,7 +1,7 @@
+import random
 import pygame
 import sys
 from pygame import display
-
 
 pygame.init()
 
@@ -75,12 +75,39 @@ while ok:
         pygame.display.update()
     elif sys.argv[1].lower() == "quicksort":
         #quicksort
+        pygame.display.set_caption("Quick Sort")
+        def partition(arr, l, r):
+            # partition function is to bring all the elemets less the pivot to the left and greater than pivot to the right
+            i = l - 1
+            pivot = arr[r]
 
+            for j in range(l, r):
+                if(arr[j] < pivot):
+                    i += 1
+                    arr[i], arr[j] = arr[j], arr[i] #swap index i and j 
 
-        disp.fill((0, 0, 0))
-        draw_bars(bar_height)
-        pygame.time.delay(10)
-        pygame.display.update()
+            arr[i + 1], arr[r] = arr[r], arr[i + 1]
+            disp.fill((0, 0, 0))
+            draw_bars(bar_height)
+            pygame.time.delay(200)
+            pygame.display.update()
+            return i + 1
+        
+        def partitionRandom(arr, l, r):
+            if(l < r):
+                randomIndex = random.randrange(l, r)
+                arr[r], arr[randomIndex] = arr[randomIndex], arr[r]
+                return partition(arr, l, r)
+
+        def quickSort(arr, l, r):
+                if r == 0:
+                    return arr
+                if(l < r):
+                    pi = partitionRandom(arr, l, r) #partion index
+                    quickSort(arr, l, pi - 1)
+                    quickSort(arr, pi + 1, r)
+        #calling quick sort method
+        quickSort(bar_height, 0, len(bar_height) - 1)
     elif sys.argv[1].lower() == "mergesort":
         #mergesort
 
