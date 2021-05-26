@@ -37,7 +37,7 @@ Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping 
 	end for
 	end procedure return list
 ```
-#### Time Complexity : 
+#### Time Complexity :
 ```
 O(n^2)
 ```
@@ -47,7 +47,7 @@ O(2)
 ```
 
 ## [Quick Sort (Random Pivot)](https://www.geeksforgeeks.org/quick-sort/)
-	
+
 QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.
 
 	*  Always pick first element as pivot
@@ -56,7 +56,7 @@ QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and pa
 
 The key process in quickSort is partition(). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
 ```
-  partition(arr[], lo, hi) 
+  partition(arr[], lo, hi)
 	pivot = arr[hi]
 	i = lo - 1     // place for swapping
 	for j := lo to hi – 1 do
@@ -77,7 +77,7 @@ The key process in quickSort is partition(). Target of partitions is, given an a
 	quicksort(arr, lo , p-1)
 	quicksort(arr, p+1, hi)
 ```
-#### Time Complexity : 
+#### Time Complexity :
 ```
 O(n logn)
 ```
@@ -99,11 +99,44 @@ If r > l
      4. Merge the two halves sorted in step 2 and 3:
              Call merge(arr, l, m, r)
 ```
-#### Time Complexity : 
+#### Time Complexity :
 ```
 O(n logn)
 ```
 #### Space Complexity:
 ```
 O(n)
+```
+## [Insertion Sort] (https://www.geeksforgeeks.org/insertion-sort/)
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+```
+1: Iterate from arr[1] to arr[n] over the array.
+2: Compare the current element (key) to its predecessor.
+3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
+```
+#### Time Complexity :
+```
+ O(n^2)
+```
+#### Space Complexity:
+```
+O(1)
+```
+## [Selection Sort] (https://www.geeksforgeeks.org/selection-sort/)
+The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning.
+```
+The algorithm maintains two subarrays in a given array.
+
+1) The subarray which is already sorted.
+2) Remaining subarray which is unsorted.
+
+In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
+```
+#### Time Complexity :
+```
+ O(n^2)
+```
+#### Space Complexity:
+```
+O(1)
 ```
