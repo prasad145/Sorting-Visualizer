@@ -1,6 +1,6 @@
 #  Sorting-Visualizer
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-##  Different Sorting Algorithms visualization using pygame!
+   Different Sorting Algorithms visualization using pygame!
 
 
 #  Algorithm Implemented:
@@ -28,11 +28,11 @@ end if
 end for
 end procedure return list
 ```
-####Time Complexity : 
+#### Time Complexity : 
 ```
 O(n^2)
 ```
-####Space Complexity:
+#### Space Complexity:
 ```
 O(2)
 ```
@@ -68,11 +68,11 @@ p = partition_r(arr, lo, hi)
 quicksort(arr, lo , p-1)
 quicksort(arr, p+1, hi)
 ```
-####Time Complexity : 
+#### Time Complexity : 
 ```
 O(n logn)
 ```
-####Space Complexity:
+#### Space Complexity:
 ```
 O(n^2)
 ```
