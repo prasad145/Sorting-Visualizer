@@ -8,7 +8,7 @@
 
 	Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 	```
-	procedure bubbleSort( list : array of items ) l
+	procedure bubbleSort( list : array of items )
 	loop = list.count;
 	for i = 0 to loop-1 do:
 		swapped = false
@@ -27,4 +27,12 @@
 	end for
 	end procedure return list
 
+	```
+	Time Complexity : 
+	```
+    	O(n^2)
+	```
+	Space Complexity:
+	```
+		O(2)
 	```
