@@ -1,4 +1,4 @@
-#  <ul>Sorting-Visualizer</ul>
+#  <ins>Sorting-Visualizer</ins>
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br/>
 Different Sorting Algorithms visualization using pygame!
 
