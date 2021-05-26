@@ -1,4 +1,4 @@
-#  <ins>Sorting-Visualizer</ins>
+# SORTING VISUALISATION
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br/>
 Different Sorting Algorithms visualization using pygame!
 
@@ -9,24 +9,24 @@ Different Sorting Algorithms visualization using pygame!
 
 Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 ```
-procedure bubbleSort( list : array of items )
-loop = list.count;
-for i = 0 to loop-1 do:
-swapped = false
-for j = 0 to loop-1 do:
-/* compare the adjacent elements */
-if list[j] > list[j+1] then
-/* swap them */
-swap( list[j], list[j+1] )
-swapped = true
-end if
-end for
-/*if no number was swapped that means array is sorted now, break the loop.*/
-if(not swapped) then
-break
-end if
-end for
-end procedure return list
+  procedure bubbleSort( list : array of items )
+	loop = list.count;
+	for i = 0 to loop-1 do:
+	swapped = false
+	for j = 0 to loop-1 do:
+	/* compare the adjacent elements */
+	if list[j] > list[j+1] then
+	/* swap them */
+	swap( list[j], list[j+1] )
+	swapped = true
+	end if
+	end for
+	/*if no number was swapped that means array is sorted now, break the loop.*/
+	if(not swapped) then
+	break
+	end if
+	end for
+	end procedure return list
 ```
 #### Time Complexity : 
 ```
@@ -43,30 +43,30 @@ QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and pa
 
 	*  Always pick first element as pivot
 	*  Always pick last element as pivot
-	* Pick a random element as pivot (efficeint)
+	*  Pick a random element as pivot (efficeint)
 
 The key process in quickSort is partition(). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
 ```
-partition(arr[], lo, hi) 
-pivot = arr[hi]
-i = lo - 1     // place for swapping
-for j := lo to hi – 1 do
-if arr[j] < pivot then
-i = i + 1
-swap arr[i] with arr[j]
-swap arr[i] with arr[hi]
-return i
+  partition(arr[], lo, hi) 
+	pivot = arr[hi]
+	i = lo - 1     // place for swapping
+	for j := lo to hi – 1 do
+	if arr[j] < pivot then
+	i = i + 1
+	swap arr[i] with arr[j]
+	swap arr[i] with arr[hi]
+	return i
 
-partition_r(arr[], lo, hi)
-r = Random Number from lo to hi
-Swap arr[r] and arr[hi]
-return partition(arr, lo, hi)
+   partition_r(arr[], lo, hi)
+	r = Random Number from lo to hi
+	Swap arr[r] and arr[hi]
+	return partition(arr, lo, hi)
 
-quicksort(arr[], lo, hi)
-if lo < hi
-p = partition_r(arr, lo, hi)
-quicksort(arr, lo , p-1)
-quicksort(arr, p+1, hi)
+   quicksort(arr[], lo, hi)
+	if lo < hi
+	p = partition_r(arr, lo, hi)
+	quicksort(arr, lo , p-1)
+	quicksort(arr, p+1, hi)
 ```
 #### Time Complexity : 
 ```
