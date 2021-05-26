@@ -112,7 +112,8 @@ Insertion sort is a simple sorting algorithm that works similar to the way you s
 ```
 1: Iterate from arr[1] to arr[n] over the array.
 2: Compare the current element (key) to its predecessor.
-3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
+3: If the key element is smaller than its predecessor, compare it to the elements before. 
+Move the greater elements one position up to make space for the swapped element.
 ```
 #### Time Complexity :
 ```
@@ -130,7 +131,8 @@ The algorithm maintains two subarrays in a given array.
 1) The subarray which is already sorted.
 2) Remaining subarray which is unsorted.
 
-In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
+In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray 
+is picked and moved to the sorted subarray.
 ```
 #### Time Complexity :
 ```
