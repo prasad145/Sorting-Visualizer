@@ -12,7 +12,7 @@ Different Sorting Algorithms visualization using pygame! <br/>
 	python visualizer.py algo_name
 ```
 ### Demo:
-[![demo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlv--n6r9vWFN3gC0xjruA8YBMY1jsIj_EKw&usqp=CAU)](https://github.com/prasad145/Sorting-Visualizer/blob/main/Resources/visualiser-wzwvmcxx-gzsl_xhkG3bIg_JrzN.mkv)
+![visualiser-demo](https://user-images.githubusercontent.com/50115378/120437443-b17d6900-c39d-11eb-83c6-bd2d1d120554.gif)
 
 #  Algorithms Implemented:
 
