@@ -11,6 +11,8 @@ Different Sorting Algorithms visualization using pygame! <br/>
 ```
 	python visualizer.py algo_name
 ```
+### Demo:
+[![demo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlv--n6r9vWFN3gC0xjruA8YBMY1jsIj_EKw&usqp=CAU)](https://github.com/prasad145/Sorting-Visualizer/blob/main/Resources/visualiser-wzwvmcxx-gzsl_xhkG3bIg_JrzN.mkv)
 
 #  Algorithms Implemented:
 
