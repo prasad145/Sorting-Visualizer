@@ -1,11 +1,11 @@
 import random
 import pygame
 import sys
-from pygame import display
+from pygame import Color, display
 
 pygame.init()
 
-disp = pygame.display.set_mode((500, 400))
+disp = pygame.display.set_mode((700, 400))
 
 
 
@@ -13,11 +13,11 @@ x = 40
 y = 40
 
 bar_width = 20
-bar_height = [200, 50, 130, 90, 250, 61, 110, 88, 33, 80, 70, 159, 180, 20]
-
+bar_height = [200, 50, 130, 90, 250, 61, 110, 88, 33, 80, 70, 159, 180, 20, 210, 39, 48, 56, 18, 240, 95]
+colors = ['#bcbcbc' ,'#a9dcd6' ,'#260566' ,'#caf0be' ,'#ffd358' ,'#f4a201','#b536f0' ,'#ffba42' ,'#a9dcd6' ,'#c39797' ,'#ff7f50' ,'#acb843' ,'#f9dada' ,'#f6b4be' ,'#ee9b9b','#0a6fd3' ,'#693a7c' ,'#b5b4e5' ,'#abeeaa','#483d8b' ,'#3a95cb']
 def draw_bars(h):
     for i in range(len(h)):
-        pygame.draw.rect(disp, (0, 0, 255), pygame.Rect(x + (30 * i), y, bar_width, bar_height[i]))
+        pygame.draw.rect(disp, colors[i], pygame.Rect(x + (30 * i), y, bar_width, bar_height[i]))
         
 ok = True
 
@@ -52,7 +52,7 @@ while ok:
                     vis = True 
                 disp.fill((0, 0, 0))
                 draw_bars(bar_height)
-                pygame.time.delay(20)
+                pygame.time.delay(100)
                 pygame.display.update()
             if not vis:
                 break     
@@ -88,7 +88,7 @@ while ok:
             draw_bars(bar_height)
             pygame.time.delay(10)
             pygame.display.update()
-            
+
     elif sys.argv[1].lower() == "quicksort":
         #quicksort
         pygame.display.set_caption("Quick Sort")
@@ -104,7 +104,7 @@ while ok:
             arr[i + 1], arr[r] = arr[r], arr[i + 1]
             disp.fill((0, 0, 0))
             draw_bars(bar_height)
-            pygame.time.delay(200)
+            pygame.time.delay(400)
             pygame.display.update()
             return i + 1
         
@@ -151,7 +151,7 @@ while ok:
                     else:
                         disp.fill((0, 0, 0))
                         draw_bars(bar_height)
-                        pygame.time.delay(70)
+                        pygame.time.delay(100)
                         pygame.display.update()
                 
                 while(i < len(left)):
@@ -160,7 +160,7 @@ while ok:
                     k += 1
                     disp.fill((0, 0, 0))
                     draw_bars(bar_height)
-                    pygame.time.delay(70)
+                    pygame.time.delay(100)
                     pygame.display.update()
 
                 while(j < len(right)):
@@ -169,7 +169,7 @@ while ok:
                     k += 1
                     disp.fill((0, 0, 0))
                     draw_bars(bar_height)
-                    pygame.time.delay(70)
+                    pygame.time.delay(100)
                     pygame.display.update()                    
         mergeSort(bar_height)
 pygame.quit()
