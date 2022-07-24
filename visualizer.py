@@ -7,8 +7,6 @@ pygame.init()
 
 disp = pygame.display.set_mode((700, 400))
 
-
-
 x = 40
 y = 40
 
