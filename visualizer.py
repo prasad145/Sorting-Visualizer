@@ -29,7 +29,7 @@ while ok:
         if event.type == pygame.QUIT:
             ok = False #close pygame window
 
-    # if any_key_get_pressed[pygame.K_SPACE]:
+   # if any_key_get_pressed[pygame.K_SPACE]:
     if sys.argv[1] != "":
         run = True
 
