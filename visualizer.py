@@ -1,13 +1,11 @@
 import random
 import pygame
-import sys
+import sys 
 from pygame import Color, display
 
 pygame.init()
 
 disp = pygame.display.set_mode((700, 400))
-
-
 
 x = 40
 y = 40
@@ -173,7 +171,3 @@ while ok:
                     pygame.display.update()                    
         mergeSort(bar_height)
 pygame.quit()
-
-
-
-
