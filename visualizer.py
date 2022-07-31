@@ -1,6 +1,6 @@
 import random
 import pygame
-import sys
+import sys 
 from pygame import Color, display
 
 pygame.init()
@@ -29,7 +29,7 @@ while ok:
         if event.type == pygame.QUIT:
             ok = False #close pygame window
 
-    # if any_key_get_pressed[pygame.K_SPACE]:
+   # if any_key_get_pressed[pygame.K_SPACE]:
     if sys.argv[1] != "":
         run = True
 
@@ -171,7 +171,3 @@ while ok:
                     pygame.display.update()                    
         mergeSort(bar_height)
 pygame.quit()
-
-
-
-
